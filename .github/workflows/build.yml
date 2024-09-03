@@ -1,0 +1,11 @@
+name: Build
+on: [ push ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: debian:experimental-20240812
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: "12.8.20"
+          repository: v8/v8
